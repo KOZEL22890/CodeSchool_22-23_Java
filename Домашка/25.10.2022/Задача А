@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+import static java.lang.Math.pow;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a= scanner.nextInt();
+        int b= scanner.nextInt();
+        hz(a,b);
+    }
+    public static void hz(int a, int b){
+        System.out.println(Math.sqrt(pow(a,2)+pow(b,2)));
+    }
+}
