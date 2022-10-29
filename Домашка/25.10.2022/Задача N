@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a= scanner.nextInt();
+        hz(a);
+    }
+    public static void hz(int a){
+        int hz=540+45*a+15*((a-1)/2)+5*(a-1-((a-1)/2));
+        System.out.println(hz/60 + " " + hz%60);
+    }
+}
