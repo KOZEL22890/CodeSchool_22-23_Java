@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a= scanner.nextInt();
+        int b= scanner.nextInt();
+        hz(a,b);
+    }
+    public static void hz(int a, int b){
+        int hz=a;
+        a=b;
+        b=hz;
+        System.out.println(a + " " + b);
+    }
+}
