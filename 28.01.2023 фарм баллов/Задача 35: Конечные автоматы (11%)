@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] mass = new int[n];
+        for(int i = 0;i<n;i++){
+            int k = scanner.nextInt();
+            int m = scanner.nextInt();
+            mass[i] = 19*m + (k + 239)*(k + 366) / 2;
+        }
+        for(int i = 0;i<n;i++){
+            System.out.println(mass[i]);
+        }
+    }
+}
