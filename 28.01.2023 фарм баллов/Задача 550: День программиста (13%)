@@ -1,0 +1,11 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        DecimalFormat dF = new DecimalFormat("0000");
+        int n = scanner.nextInt();
+        System.out.println(n % 400 == 0 || n % 4 == 0 && n % 100 != 0 ? "12/09/" + dF.format(n) : "13/09/" + dF.format(n));
+    }
+}
