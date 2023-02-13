@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        String out_file = "";
+        out_file = out_file(out_file);
+        int n = Integer.parseInt(out_file.split(" ")[0]);
+        int k = Integer.parseInt(out_file.split(" ")[1]);
+        String in_file = "";
+        for(int i = n;i<=k;i++){
+            if(Math.abs(Math.sqrt(i)-(int)Math.sqrt(i))<0.0001){
+                in_file+=i+" ";
+            }
+        }
+        in_file(in_file);
+    }
+    public static void in_file(String hz2) throws IOException {
+        File da = new File("NO");
+        FileOutputStream fos = new FileOutputStream(da);
+        fos.write(hz2.getBytes());
+        fos.close();
+    }
+    public static String out_file (String file) throws IOException {
+        File net = new File("YES");
+        FileInputStream FInS = new FileInputStream(net);
+        int i;
+        while((i=FInS.read())!= -1){
+            file+=(char)i;
+        }
+        FInS.close();
+        return file;
+    }
+}
